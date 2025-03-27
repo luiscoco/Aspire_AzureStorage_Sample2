@@ -4,11 +4,17 @@ In this post we are going to create an Azure Storage Account and a Blob Storage 
 
 ## 1. Prerrequisites
 
-### 1.1. Install .NET 9 or .NET 10
+### 1.1. Install .NET 9
 
+Visit this web site (https://dotnet.microsoft.com/es-es/download/dotnet/9.0) and download **Windows x64 SDK 9.0.202**
 
-### 1.2. Install Visual Studio 2022 Community Edition v17.3 or v.17.4
+![image](https://github.com/user-attachments/assets/87e72641-7c88-4839-9bdb-91f64568c20a)
 
+### 1.2. Install Visual Studio 2022 v17.3 Community Edition
+
+https://visualstudio.microsoft.com/downloads/
+
+![image](https://github.com/user-attachments/assets/653307c3-fe36-43c0-ac29-505d4dead3dd)
 
 ## 2. Create a new .NET Aspire Empty App
 
