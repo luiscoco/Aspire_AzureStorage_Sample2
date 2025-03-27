@@ -34,7 +34,7 @@ This is the solution structure
 
 ## 3. We load the Nuget packages in the AppHost project
 
-![image](https://github.com/user-attachments/assets/a1e52b42-6e8a-43a7-a58c-1526930c70f2)
+![image](https://github.com/user-attachments/assets/da7581d7-7948-41ec-9943-2198d0a176b9)
 
 ## 4. AppHost project source code
 
