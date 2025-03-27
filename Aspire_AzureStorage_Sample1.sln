@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire_AzureStorage_Sample1.AppHost", "Aspire_AzureStorage_Sample1.AppHost\Aspire_AzureStorage_Sample1.AppHost.csproj", "{9178CB3A-4997-4E8C-B91A-16642450D438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspire_AzureStorage_Sample1.ServiceDefaults", "Aspire_AzureStorage_Sample1.ServiceDefaults\Aspire_AzureStorage_Sample1.ServiceDefaults.csproj", "{C793B78A-B406-9CB3-0890-88F101612663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureStorage_Consumer", "AzureStorage_Consumer\AzureStorage_Consumer.csproj", "{C7D1B1E6-7122-40A6-BB0F-54AB44E0D656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9178CB3A-4997-4E8C-B91A-16642450D438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9178CB3A-4997-4E8C-B91A-16642450D438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9178CB3A-4997-4E8C-B91A-16642450D438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9178CB3A-4997-4E8C-B91A-16642450D438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C793B78A-B406-9CB3-0890-88F101612663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C793B78A-B406-9CB3-0890-88F101612663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C793B78A-B406-9CB3-0890-88F101612663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C793B78A-B406-9CB3-0890-88F101612663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D1B1E6-7122-40A6-BB0F-54AB44E0D656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D1B1E6-7122-40A6-BB0F-54AB44E0D656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D1B1E6-7122-40A6-BB0F-54AB44E0D656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D1B1E6-7122-40A6-BB0F-54AB44E0D656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {468F3A20-28C4-4DED-ABD1-94F817E47EA3}
+	EndGlobalSection
+EndGlobal
