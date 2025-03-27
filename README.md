@@ -93,11 +93,91 @@ We input the secrets in the **secrets.json** file:
 }
 ```
 
-## 5. 
+## 5. We create a C# console application inside the solution
 
+![image](https://github.com/user-attachments/assets/65f5c7dc-115c-41a0-bd06-5155a8bc93e8)
 
+## 6. We load the Nuget packages
 
+![image](https://github.com/user-attachments/assets/f3934cd6-8e0a-451b-801d-4589fa894bd4)
 
-## Secrets
+We add the **.NET Aspire Orchestrator Support** in the Console application
+
+![image](https://github.com/user-attachments/assets/e8f793a3-69b2-4c28-983c-b0af4d11be1e)
+
+## 7. We configure the appsettings.json file
+
+```json
+{
+  "ConnectionStrings": {
+    "blobs": "https://luiscontainer.blob.core.windows.net/"
+  }
+}
+```
+
+## 8. We input the C# Console application source code
+
+**Program.cs**
+
+```csharp
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Azure.Storage.Blobs;
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Azure.Identity;
+
+var builder = Host.CreateApplicationBuilder(args);
+
+// Aspire-style service wiring
+builder.AddServiceDefaults();
+
+// Register Azure Blob client using binding name (from Aspire)
+builder.AddAzureBlobClient("blobs");
+
+// Register your hosted service that consumes the BlobServiceClient
+builder.Services.AddHostedService<BlobWorker>();
+
+var app = builder.Build();
+app.Run();
+
+// === Worker Service (DI entry point like a controller) ===
+
+public class BlobWorker : IHostedService
+{
+    private readonly BlobServiceClient _client;
+
+    public BlobWorker(BlobServiceClient client)
+    {
+        _client = client;
+    }
+
+    public async Task StartAsync(CancellationToken cancellationToken)
+    {
+        Console.WriteLine("Starting BlobWorker...");
+
+        var container = _client.GetBlobContainerClient("luiscocoblobthird");
+        await container.CreateIfNotExistsAsync(cancellationToken: cancellationToken);
+
+        var blobNameAndContent = Guid.NewGuid().ToString();
+
+        await container.UploadBlobAsync(blobNameAndContent, new BinaryData("Sample blob content"), cancellationToken);
+        Console.WriteLine($"Uploaded blob: {blobNameAndContent}");
+
+        await foreach (var blob in container.GetBlobsAsync(cancellationToken: cancellationToken))
+        {
+            Console.WriteLine($"- {blob.Name}");
+        }
+
+        Console.WriteLine("BlobWorker finished.");
+    }
+    public Task StopAsync(CancellationToken cancellationToken) => Task.CompletedTask;
+}
+```
+
+## 9. We run the appliction and verify the results 
+
+Before running the application we have to set the **AppHost project** as the **StartUp Project**
 
 
