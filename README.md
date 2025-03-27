@@ -125,6 +125,10 @@ We add the **.NET Aspire Orchestrator Support** in the Console application
 
 ![image](https://github.com/user-attachments/assets/e8f793a3-69b2-4c28-983c-b0af4d11be1e)
 
+We confirm the Console project was added as reference in the AppHost project
+
+![image](https://github.com/user-attachments/assets/2bc59168-c7bd-488c-bea7-ed096b998c4b)
+
 ## 7. We configure the appsettings.json file
 
 ```json
@@ -199,5 +203,15 @@ public class BlobWorker : IHostedService
 ## 9. We run the appliction and verify the results 
 
 Before running the application we have to set the **AppHost project** as the **StartUp Project**
+
+![image](https://github.com/user-attachments/assets/b8c59d8e-59d6-42b2-ac53-6920ee65f0ee)
+
+We run the application and automatically we are redirect to the Aspire Dashboard
+
+![image](https://github.com/user-attachments/assets/adc2b29c-d8df-4b4e-ba82-19025125f6eb)
+
+We also can see the application logs in the console output
+
+
 
 
