@@ -28,12 +28,9 @@ This is the solution structure
 
 ## 3. We load the Nuget packages in the AppHost project
 
+![image](https://github.com/user-attachments/assets/a1e52b42-6e8a-43a7-a58c-1526930c70f2)
 
-
-
-
-
-## 3. AppHost project source code
+## 4. AppHost project source code
 
 **Program.cs**
 
@@ -69,16 +66,13 @@ builder.AddProject<Projects.AzureStorage_Consumer>("azurestorage-consumer").With
 builder.Build().Run();
 ```
 
-****
+We also have to set the AppHost project secrets
 
+We right click on the AppHost project name and select the menu option **Manage User Secrets**
 
+![image](https://github.com/user-attachments/assets/5499aa75-1d18-4d77-bc18-01d64522a685)
 
-## 3. 
-
-
-
-
-## Secrets
+We input the secrets in the **secrets.json** file:
 
 ```
 {
@@ -92,3 +86,12 @@ builder.Build().Run();
   }
 }
 ```
+
+## 5. 
+
+
+
+
+## Secrets
+
+
