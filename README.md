@@ -232,6 +232,26 @@ We run the application and automatically we are redirect to the Aspire Dashboard
 
 We also can see the application logs in the console output
 
+![image](https://github.com/user-attachments/assets/f0d43848-b468-47e6-85ff-e234288e63f3)
+
+If we select in the Console icon in the left hand side menu you can see the project logs
+
+![image](https://github.com/user-attachments/assets/3e138917-d5f3-4303-a278-44484d88f403)
+
+We now login in Azure Portal and navigate to the Storage Accounts
+
+We can see a new Storage Account was created
+
+![image](https://github.com/user-attachments/assets/a69ed086-fa92-4eea-8b5d-b220eda089a4)
+
+If we click on the Storage Account name we can verify a new Blob Container was also created
+
+![image](https://github.com/user-attachments/assets/05c88b44-a7c6-4daf-b55a-979bfa75a9d9)
+
+If we 
+
+
+
 
 
 
