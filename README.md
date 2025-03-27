@@ -113,11 +113,11 @@ We input the secrets in the **secrets.json** file:
 }
 ```
 
-## 5. We create a C# console application inside the solution
+## 5. We create a C# console project inside the solution
 
 ![image](https://github.com/user-attachments/assets/65f5c7dc-115c-41a0-bd06-5155a8bc93e8)
 
-## 6. We load the Nuget packages
+## 6. We load the Nuget packages in C# console project
 
 ![image](https://github.com/user-attachments/assets/f3934cd6-8e0a-451b-801d-4589fa894bd4)
 
@@ -128,6 +128,10 @@ We add the **.NET Aspire Orchestrator Support** in the Console application
 We confirm the Console project was added as reference in the AppHost project
 
 ![image](https://github.com/user-attachments/assets/2bc59168-c7bd-488c-bea7-ed096b998c4b)
+
+We also has to add the ServiceDefaults project as reference in the Console project
+
+![image](https://github.com/user-attachments/assets/0dde9499-1aa0-4633-b000-3118a9a3632a)
 
 ## 7. We configure the appsettings.json file
 
