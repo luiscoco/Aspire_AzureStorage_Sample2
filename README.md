@@ -58,6 +58,20 @@ This is the solution structure
 
 ## 4. AppHost project source code
 
+This C# code defines a distributed application using .NET Aspire, specifically targeting Azure services with infrastructure provisioning (Azure Storage Account and Blob Storage) support
+
+This code:
+
+a) Provisions an Azure Storage Account with a blob container
+
+b) Assigns necessary permissions
+
+c) Ensures security settings
+
+d) Connects the storage to an application project (azurestorage-consumer)
+
+e) Uses Aspire to define, provision, and orchestrate the whole setup
+
 **Program.cs**
 
 ```csharp
