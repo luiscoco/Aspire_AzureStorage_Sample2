@@ -1,6 +1,8 @@
-# How to integrate .NET 9.1 Aspire with Azure Storage Account and Blob 
+# Integrating .NET Aspire 9.1 with Azure Storage Account and Blob Containers
 
-In this post we are going to create an Azure Storage Account and a Blob Storage Container from .NET Aspire
+In this post, we’ll walk through how to create an Azure Storage Account and a Blob Storage Container using .NET Aspire 9.1
+
+You’ll learn how to define and provision these resources as part of a distributed application
 
 ## 1. Prerrequisites
 
