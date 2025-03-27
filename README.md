@@ -248,7 +248,10 @@ If we click on the Storage Account name we can verify a new Blob Container was a
 
 ![image](https://github.com/user-attachments/assets/05c88b44-a7c6-4daf-b55a-979bfa75a9d9)
 
-If we 
+If we click on the Blob name we can verify how a new file was uploaded inside it
+
+![image](https://github.com/user-attachments/assets/f090b0d6-5805-4800-bc0d-7a3c175e0b02)
+
 
 
 
