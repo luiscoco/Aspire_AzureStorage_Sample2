@@ -161,6 +161,22 @@ We also has to add the ServiceDefaults project as reference in the Console proje
 
 ## 8. We input the C# Console application source code
 
+This code is a simple .NET console application using the .NET Aspire style to interact with Azure Blob Storage
+
+This is a minimal Aspire-style .NET app that:
+
+a) Automatically wires up Azure Blob Storage using Aspire bindings.
+
+**AddAzureBlobClient("blobs")**: Registers a BlobServiceClient using a named binding called "blobs"—configured via Aspire's service discovery and binding system.
+
+b) Creates a container if it doesn't exist.
+
+c) Uploads a test blob.
+
+d) Lists all blobs.
+
+e) Runs as a background service using IHostedService.
+
 **Program.cs**
 
 ```csharp
