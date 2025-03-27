@@ -16,6 +16,26 @@ https://visualstudio.microsoft.com/downloads/
 
 ![image](https://github.com/user-attachments/assets/653307c3-fe36-43c0-ac29-505d4dead3dd)
 
+### 1.3. Run these commands to configure Azure 
+
+We first log in Azure
+
+```
+az login
+```
+
+![image](https://github.com/user-attachments/assets/ff2e6b77-1656-47a9-a56f-d337d8063ffd)
+
+![image](https://github.com/user-attachments/assets/53bc1554-751c-4699-8d43-04c2683f01f6)
+
+We verify Azure account information
+
+```
+az account show
+```
+
+![image](https://github.com/user-attachments/assets/054f9148-3b93-4563-8dd5-72c34f25a5d2)
+
 ## 2. Create a new .NET Aspire Empty App
 
 We run Vistual Studio 2022 and create a new project
@@ -83,7 +103,7 @@ We input the secrets in the **secrets.json** file:
 ```
 {
   "Azure": {
-    "SubscriptionId": "3392e711-a640-4d25-8dc1-112db40f09dd",
+    "SubscriptionId": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "AllowResourceGroupCreation": true,
     "ResourceGroup": "luispruebamyRG",
     "Location": "westeurope",
