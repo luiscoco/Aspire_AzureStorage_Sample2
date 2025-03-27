@@ -252,6 +252,15 @@ If we click on the Blob name we can verify how a new file was uploaded inside it
 
 ![image](https://github.com/user-attachments/assets/f090b0d6-5805-4800-bc0d-7a3c175e0b02)
 
+If we click on the file name we can select the download option and see the file content
+
+![image](https://github.com/user-attachments/assets/99d77dc2-43aa-4adb-985f-a4253a533edf)
+
+After downloaded the file we have to see the file content
+
+![image](https://github.com/user-attachments/assets/55e17350-2f97-4a97-8734-a9e2cdd22a2e)
+
+![image](https://github.com/user-attachments/assets/8f108e76-2452-4353-bc13-20f8f491d7e3)
 
 
 
