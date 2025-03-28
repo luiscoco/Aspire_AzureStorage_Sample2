@@ -108,7 +108,41 @@ builder.AddProject<Projects.AzureStorage_Consumer>("azurestorage-consumer").With
 builder.Build().Run();
 ```
 
-We also have to set the AppHost project secrets
+Here is a more detail explanation about the infrastructure configuration (Azure Storage Account provisioning configuration) code:
+
+```csharp
+var storage = builder.AddAzureStorage("storage")
+    .ConfigureInfrastructure((infra) =>
+    {
+        var storageAccount = infra.GetProvisionableResources()
+                                  .OfType<StorageAccount>()
+                                  .Single();
+
+        // Set the Storage Account name property
+        storageAccount.Name = "luiscontainer";
+
+        // Storage Account Contributor and Storage Blob Data Owner roles are required by the Azure Functions host
+        var principalTypeParameter = new ProvisioningParameter(AzureBicepResource.KnownParameters.PrincipalType, typeof(string));
+        var principalIdParameter = new ProvisioningParameter(AzureBicepResource.KnownParameters.PrincipalId, typeof(string));
+        infra.Add(storageAccount.CreateRoleAssignment(StorageBuiltInRole.StorageAccountContributor, principalTypeParameter, principalIdParameter));
+        infra.Add(storageAccount.CreateRoleAssignment(StorageBuiltInRole.StorageBlobDataOwner, principalTypeParameter, principalIdParameter));
+
+        // Ensure that public access to blobs is disabled
+        storageAccount.AllowBlobPublicAccess = false;
+    });
+```
+
+The above code:
+
+a) Adds a Storage Account to the app’s infrastructure.
+
+b) Sets its name.
+
+c) Grants it appropriate RBAC roles (Contributor + Data Owner) for a dynamic identity.
+
+d) Secures it by disabling public blob access.
+
+We also have to set the **AppHost project secrets**
 
 We right click on the AppHost project name and select the menu option **Manage User Secrets**
 
