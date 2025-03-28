@@ -108,7 +108,7 @@ builder.AddProject<Projects.AzureStorage_Consumer>("azurestorage-consumer").With
 builder.Build().Run();
 ```
 
-Here is a more detail explanation about the infrastructure configuration (Azure Storage Account provisioning configuration) code:
+Here is a more detailed explanation about the infrastructure configuration (Azure Storage Account provisioning configuration) code:
 
 ```csharp
 var storage = builder.AddAzureStorage("storage")
